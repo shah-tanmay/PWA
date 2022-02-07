@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Snake Game</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="manifest" href="./manifest.webmanifest" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div id="copy">
+			<div><h1 id="score">Score: 0</h1></div>
+			<div id="copytoclipboard">
+				<h1 onclick="{copytoclipboard()}" style="cursor: pointer">
+					<i class="ri-clipboard-fill"></i>
+				</h1>
+			</div>
+		</div>
+		<div id="container">
+			<canvas id="canvas"></canvas>
+		</div>
+		<div>
+			<div id="pause">pause</div>
+			<p>Hit the wall to restart</p>
+		</div>
+		<script type="module" src="app.js"></script>
+		<script>
+			const copytoclipboard = () => {
+				window.navigator.vibrate([200, 100, 200]);
+				navigator.clipboard.writeText(
+					document.getElementById("score").innerHTML,
+				);
+				alert("Your Score is Copied to the clipboard successfully");
+			};
+		</script>
+	</body>
+</html>

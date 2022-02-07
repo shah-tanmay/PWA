@@ -1,0 +1,15 @@
+{
+	"name": "Snake Game",
+	"short_name": "Sankesathon",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#fff",
+	"description": "Sanke and Ladders game",
+	"icons": [
+		{
+			"src": "images/icon.jpg",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
